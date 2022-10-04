@@ -1,7 +1,7 @@
 import style from "../Footer/Footer.module.css";
 import Link from "next/link";
 
-import { AiFillFacebook, AiFillTwitterCircle } from 'react-icons/ai';
+// import { AiFillFacebook, AiFillTwitterCircle } from ''react-icons/ai';
 import marketplace from '../../images/marketplace.png';
 import Ladypanda from '../../images/Ladypanda.png';
 import Malepanda from '../../images/Malepanda.png';
@@ -36,8 +36,8 @@ const Footer = () => {
         <br /> 
         FOLLOW US:
         <br />       
-       <Link href='https://www.facebook.com/philip.lee.94009'><a><AiFillFacebook size="2em" fill="rgb(66,103,178)" /></a></Link>&nbsp;
-       <Link href='https://www.facebook.com/philip.lee.94009'><a><AiFillTwitterCircle size="2em" fill="rgb(29,161,242)" /></a></Link> 
+       {/* <Link href='https://www.facebook.com/philip.lee.94009'><a><AiFillFacebook size="2em" fill="rgb(66,103,178)" /></a></Link>&nbsp;
+       <Link href='https://www.facebook.com/philip.lee.94009'><a><AiFillTwitterCircle size="2em" fill="rgb(29,161,242)" /></a></Link>  */}
                       
         </div>
         <div className={style.cardItem}>
