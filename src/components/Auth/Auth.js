@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
 
-import { gapi } from 'gapi-script';
 
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
@@ -82,20 +80,7 @@ const SignUp = () => {
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
-
-          {/* <GoogleOAuthProvider clientId="525143663318-b25a9n660fhfkiml438smfajddjc9rbs.apps.googleusercontent.com">...</GoogleOAuthProvider>;      */}
-
-          <GoogleLogin
-           clientId="525143663318-b25a9n660fhfkiml438smfajddjc9rbs.apps.googleusercontent.com"
-            render={(renderProps) => (
-              <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
-                Google Sign In
-              </Button>
-            )}
-            onSuccess={googleSuccess}
-            onFailure={googleError}
-            cookiePolicy="single_host_origin"
-          />
+       
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
