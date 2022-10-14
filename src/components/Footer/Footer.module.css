@@ -11,28 +11,27 @@
   }
   
   .title {
-    font-weight: 300;
-    color: #064e40;
-    background-color: #ffd4cb;
+    font-weight: 350;
+    color: #FFFFFF;
+    background-color: #F89880;
     width: max-content;
     padding: 5px;
     transition: all 1s ease;
-    border-radius: 10px;
+    border-radius: 8px;
   }
   
   .title:hover {
-    background-color: #fff1ee;
-    color: #008081;  
-  }
+    background-color: #87CEFB;
+   }
   
   .linkTitle {
     transform-origin: left;
-    transition: all 1s ease;
+    transition: all 1s
   }
   
   .linkTitle:hover {
     transform: scale(1.05);
-  }
+    }
   
   .link {
     display: flex;
@@ -43,8 +42,8 @@
   .linkText{
       margin-right: 20px;
       cursor: pointer;
-      color: #064e40;
-      font-size: 15px;         
+      color: #DC582A;
+      font-size: 18px;         
   }
   
   .cardL {
@@ -56,12 +55,11 @@
   }
   
   .cardItem {
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: 10px;
     text-align: right;  
   }
-    
-  
+      
   @media screen and (max-width: 480px) {
     .container {
       height: auto;

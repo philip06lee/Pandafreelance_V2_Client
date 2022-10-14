@@ -3,19 +3,15 @@ module.exports = {
       browser: true,
       es6: true,
     },
-
-    
     ignorePatterns: ["Footer.js", "**/vendor/*.js"],
      rules: {
           //...
     },
-
-    gnorePatterns: ["Auth.js", "**/vendor/*.js"],
+    ignorePatterns: ["Navbar.js", "**/vendor/*.js"],
      rules: {
           //...
     },
-  
-
+    ignorePatterns: ['.eslintrc.js'],
     extends: [
       'plugin:react/recommended',
       'airbnb',

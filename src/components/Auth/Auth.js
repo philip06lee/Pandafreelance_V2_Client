@@ -40,22 +40,6 @@ const SignUp = () => {
     }
   };
 
-  const googleSuccess = async (res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
- 
-
-    try {
-      dispatch({ type: AUTH, data: { result, token } });
-      history.push('/');
-     
-      
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const googleError = () => console.log('Google  was unsuccessful. Try again later');
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   return (

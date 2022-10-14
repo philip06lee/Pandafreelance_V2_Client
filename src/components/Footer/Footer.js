@@ -1,18 +1,16 @@
-import style from "../Footer/Footer.module.css";
-import Link from "next/link";
-
+import React from 'react';
+import Link from 'next/link';
+import style from './Footer.module.css';
 import Ladypanda from '../../images/Ladypanda.png';
 import Malepanda from '../../images/Malepanda.png';
 
 const Footer = () => {
   return (
     <div className={style.container}>
-      <div className={style.cardL}>
-    
-        <h1 className={style.title}>Hire Top Freelancers</h1>
-        
+      <div className={style.cardL}>    
+        <h1 className={style.title}>Hire Top Freelancers Instantly</h1>        
         <h1 className={style.linkTitle}>                     
-        <span className={style.linkText}>Connect to freelancers with proven track records at a price to make you happy.</span>
+        <span className={style.linkText}>Connect to freelancers with proven track records at a price to make You Happy.</span>
         </h1>
       </div>
       <div className={style.cardS}>
@@ -27,10 +25,8 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.cardS}>
-        <div className={style.cardItem}>
-      
-        <br />       
-                             
+        <div className={style.cardItem}>      
+        <br />                            
         </div>
         <div className={style.cardItem}>
           © 2022 PANDAFREELANCE                   
@@ -41,5 +37,4 @@ const Footer = () => {
     </div>
   );
 };
-
 export default Footer;
