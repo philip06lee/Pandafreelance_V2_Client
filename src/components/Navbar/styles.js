@@ -56,8 +56,8 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     backgroundColor: deepOrange[100],
-    padding: '3px 3px',
-    borderRadius: 3,
+    padding: '3px 8px 5px 2px',
+    borderRadius: 5,
   },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),

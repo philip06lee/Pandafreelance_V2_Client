@@ -9,7 +9,7 @@ import { reducers } from './reducers';
 import App from './App';
 import './index.css';
 
-const store = configureStore({reducer:reducers}, {}, compose(applyMiddleware(thunk)));
+const store = configureStore({ reducer: reducers }, {}, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,6 +17,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
-
-
-

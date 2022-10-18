@@ -3,7 +3,7 @@ import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
-import cangosellLogo from '../../images/cangosellLogo.png';
+// import cangosellLogo from '../../images/cangosellLogo.png';
 import cangosellText from '../../images/cangosellText.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
@@ -34,11 +34,7 @@ const Navbar = () => {
 
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
-      <Link to="/" className={classes.brandContainer}>
-        <img component={Link} to="/" src={cangosellText} alt="icon" height="45px" />
-        <img className={classes.image} src={cangosellLogo} alt="icon" height="45px" />
-        <Typography className={classes.userName} variant="h6">Let's Get Simple </Typography>
-      </Link>     
+      <Link to="/" className={classes.brandContainer}><img className={classes.image} src={cangosellText} alt="icon" height="45px" /></Link>
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>

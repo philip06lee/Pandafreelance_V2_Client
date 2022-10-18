@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-
-
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-
-import Icon from './icon';
+// import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
-import { AUTH } from '../../constants/actionTypes';
+// import { AUTH } from '../../constants/actionTypes';
 import useStyles from './styles';
 import Input from './Input';
 
@@ -41,7 +38,6 @@ const SignUp = () => {
   };
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
   return (
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper} elevation={6}>
@@ -61,10 +57,7 @@ const SignUp = () => {
             <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
             { isSignup && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" /> }
           </Grid>
-          <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
-            { isSignup ? 'Sign Up' : 'Sign In' }
-          </Button>
-       
+          <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>{isSignup ? 'Sign Up' : 'Sign In'}</Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
