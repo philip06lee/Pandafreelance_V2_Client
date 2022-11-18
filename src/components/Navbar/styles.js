@@ -1,24 +1,25 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { deepPurple, deepOrange } from '@material-ui/core/colors';
+import { deepPurple, orange, green } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
   appBar: {
+    backgroundColor: green[100],
     borderRadius: 15,
-    margin: '30px 0',
+    margin: '10px 0px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 50px',
+    padding: '10px 10px',
     [theme.breakpoints.down('sm')]: {
+      flexWrap: 'wrap',
       flexDirection: 'column',
     },
   },
   heading: {
     color: theme.palette.primary.main,
-    textDecoration: 'none',
-    fontSize: '3em',
-    fontWeight: 500,
+    alignItems: 'center',
+    textAlign: 'center',
   },
   image: {
     marginLeft: '10px',
@@ -27,10 +28,11 @@ export default makeStyles((theme) => ({
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
-    width: '400px',
+    width: '500px',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
     },
+    color: '#FFFFFF',
   },
   profile: {
     display: 'flex',
@@ -45,6 +47,7 @@ export default makeStyles((theme) => ({
   },
   logout: {
     marginLeft: '20px',
+    color: 'white',
   },
   userName: {
     display: 'flex',
@@ -55,9 +58,9 @@ export default makeStyles((theme) => ({
   brandContainer: {
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: deepOrange[100],
-    padding: '3px 8px 5px 2px',
-    borderRadius: 5,
+    backgroundColor: orange[500],
+    padding: '4px 0px 0px 0px',
+    borderRadius: 10,
   },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),

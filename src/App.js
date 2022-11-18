@@ -7,10 +7,12 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
 import CreatorOrTag from './components/CreatorOrTag/CreatorOrTag';
+import Footer from './components/Footer/Footer';
+import About from './components/About/About';
+import Privacy from './components/Privacy/Privacy';
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
-
   return (
     <BrowserRouter>
       <Container maxWidth="xl">
@@ -23,8 +25,12 @@ const App = () => {
           <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
         </Switch>
+        <Route path="/About" exact component={About} />
+        <Route path="/Privacy" exact component={Privacy} />
+        <Footer />
       </Container>
     </BrowserRouter>
   );
 };
 export default App;
+

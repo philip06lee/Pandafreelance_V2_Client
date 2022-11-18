@@ -3,9 +3,8 @@ import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
-// import cangosellLogo from '../../images/cangosellLogo.png';
-import cangosellText from '../../images/cangosellText.png';
 import * as actionType from '../../constants/actionTypes';
+import cangosellText from '../../images/cangosellText.png';
 import useStyles from './styles';
 
 const Navbar = () => {
@@ -34,16 +33,17 @@ const Navbar = () => {
 
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
-      <Link to="/" className={classes.brandContainer}><img className={classes.image} src={cangosellText} alt="icon" height="45px" /></Link>
+      <Link to="/" className={classes.brandContainer}><img className={classes.image} src={cangosellText} alt="icon" height="35px" /></Link>
+      <Typography className={classes.heading} variant="h6"><strong>Talent Marketplace For All</strong></Typography>
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>
             <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
             <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
-            <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
+            <Button variant="contained" className={classes.logout} color="primary" onClick={logout}>Logout</Button>
           </div>
         ) : (
-          <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
+          <Button component={Link} to="/auth" variant="contained" className={classes.logout} color="primary">Sign In</Button>
         )}
       </Toolbar>
     </AppBar>
